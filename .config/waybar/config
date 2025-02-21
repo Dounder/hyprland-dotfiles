@@ -1,0 +1,96 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 32,
+  "margin": "0 10",
+  "modules-left": ["custom/media"],
+  "modules-center": ["clock"],
+  "modules-right": [
+    "hyprland/workspaces",
+    "hyprland/language",
+    "pulseaudio",
+    "bluetooth",
+    "network",
+    "custom/notification",
+    "custom/power"
+  ],
+
+  //? left
+  "custom/media": {
+    "interval": 10,
+    "exec": "$HOME/.config/waybar/media.sh",
+    "exec-if": "playerctl status",
+    "tooltip": true,
+    "on-click": "playerctl play-pause",
+    "on-scroll-up": "playerctl previous",
+    "on-scroll-down": "playerctl next",
+    "max-length": 25
+  },
+
+  //? center
+  "clock": {
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "format": "{:%a, %d %b, %I:%M %p}"
+  },
+
+  //? right
+  "hyprland/workspaces": {
+    "disable-scroll": true,
+    "persistent_workspaces": {
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": []
+    }
+  },
+  "hyprland/language": {
+    "format": "{}",
+    "format-lat": "LATAM",
+    "format-en": "US"
+  },
+  "pulseaudio": {
+    "reverse-scrolling": 1,
+    "format": "{volume}% {icon} {format_source}",
+    "format-bluetooth": "{volume}% {icon} {format_source}",
+    "format-bluetooth-muted": " {icon} {format_source}",
+    "format-muted": "婢 {format_source}",
+    "format-source": "{volume}% ",
+    "format-source-muted": "",
+    "format-icons": {
+      "headphone": "",
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": ["奄", "奔", "墳"]
+    },
+    "on-click": "pavucontrol"
+  },
+  "bluetooth": {
+    "format": "",
+    "interval": 5,
+    "tooltip": true,
+    "on-click": "blueman-manager",
+    "exec-if": "bluetoothctl show | grep 'Powered: yes'"
+  },
+  "network": {
+    "format-wifi": "直 {signalStrength}% ({ipaddr})",
+    "format-ethernet": "",
+    "format-disconnected": "睊 Disconnected",
+    "interval": 5,
+    "tooltip": true,
+    "on-click": "nm-connection-editor"
+  },
+  "custom/notification": {
+    "tooltip": false,
+    "format": "",
+    "on-click": "swaync-client -t -sw",
+    "escape": true
+  },
+  "custom/power": {
+    "format": "",
+    "on-click": "wlogout",
+    "tooltip": false
+  }
+}

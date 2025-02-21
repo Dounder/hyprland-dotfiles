@@ -1,0 +1,83 @@
+* {
+  bg: #24273a;
+  fg: #f8f8f2;
+  selected: #6e738d;
+
+  width: 500;
+  font: "Fira Code";
+}
+
+element-text,
+element-icon,
+mode-switcher {
+  background-color: inherit;
+  text-color: inherit;
+}
+
+window {
+  height: 600;
+  border-radius: 10px;
+  background-color: @bg;
+}
+
+mainbox {
+  background-color: @bg;
+}
+
+inputbar {
+  children: [prompt, entry];
+  background-color: @bg;
+}
+
+prompt {
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  background-color: @selected;
+  text-color: @fg;
+}
+
+entry {
+  padding: 20px 20px 20px 0;
+  text-color: @fg;
+  background-color: inherit;
+}
+
+listview {
+  columns: 1;
+  lines: 10;
+  background-color: inherit;
+}
+
+element {
+  padding: 5px;
+  background-color: inherit;
+  text-color: @fg;
+  border-radius: 5px;
+  margin: 0 20px;
+}
+
+element-icon {
+  size: 30px;
+}
+
+element-text {
+  margin: 10px 0;
+}
+
+element selected {
+  background-color: @selected;
+  text-color: @fg;
+}
+
+button {
+  padding: 10px;
+  background-color: @bg;
+  text-color: @fg;
+}
+
+button selected {
+  background-color: @selected;
+  text-color: @fg;
+  border-radius: 10px;
+}
