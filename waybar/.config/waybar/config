@@ -1,7 +1,7 @@
 {
   "layer": "top",
   "position": "top",
-  "height": 32,
+  "height": 35,
   "margin": "0 10",
   "modules-left": ["custom/media"],
   "modules-center": ["clock"],
