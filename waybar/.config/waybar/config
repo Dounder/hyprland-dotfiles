@@ -53,7 +53,7 @@
     "format": "{volume}% {icon} {format_source}",
     "format-bluetooth": "{volume}% {icon} {format_source}",
     "format-bluetooth-muted": " {icon} {format_source}",
-    "format-muted": "婢 {format_source}",
+    "format-muted": "{format_source}",
     "format-source": "{volume}% ",
     "format-source-muted": "",
     "format-icons": {
@@ -62,8 +62,7 @@
       "headset": "",
       "phone": "",
       "portable": "",
-      "car": "",
-      "default": ["奄", "奔", "墳"]
+      "car": ""
     },
     "on-click": "pavucontrol"
   },
@@ -75,9 +74,9 @@
     "exec-if": "bluetoothctl show | grep 'Powered: yes'"
   },
   "network": {
-    "format-wifi": "直 {signalStrength}% ({ipaddr})",
+    "format-wifi": " {signalStrength}%",
     "format-ethernet": "",
-    "format-disconnected": "睊 Disconnected",
+    "format-disconnected": "睊",
     "interval": 5,
     "tooltip": true,
     "on-click": "nm-connection-editor"
