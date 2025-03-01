@@ -7,22 +7,21 @@ This guide provides detailed, step-by-step instructions for installing and confi
 ## Table of Contents
 
 - [Table of Contents](#table-of-contents)
-- [1. Flathub Installations ](#1-flathub-installations-)
-- [2. Snap Installations ](#2-snap-installations-)
-- [3. Docker Setup ](#3-docker-setup-)
+- [1. App Installations ](#1-app-installations-)
+- [2. Docker Setup ](#2-docker-setup-)
   - [Optional: Install LazyDocker ](#optional-install-lazydocker-)
-- [4. Fast Node Manager (fnm) ](#4-fast-node-manager-fnm-)
-- [5. ZSH Configuration ](#5-zsh-configuration-)
-  - [5.1 Spaceship Theme ](#51-spaceship-theme-)
-  - [5.2 ZSH Plugins ](#52-zsh-plugins-)
-- [6. Hyprland Setup ](#6-hyprland-setup-)
-  - [6.1 Install Essential Packages](#61-install-essential-packages)
-  - [6.2 Screen Sharing Configuration ](#62-screen-sharing-configuration-)
-- [7. Custom Fonts ](#7-custom-fonts-)
+- [3. Fast Node Manager (fnm) ](#3-fast-node-manager-fnm-)
+- [4. ZSH Configuration ](#4-zsh-configuration-)
+  - [4.1 Spaceship Theme ](#41-spaceship-theme-)
+  - [4.2 ZSH Plugins ](#42-zsh-plugins-)
+- [5. Hyprland Setup ](#5-hyprland-setup-)
+  - [5.1 Install Essential Packages ](#51-install-essential-packages-)
+  - [5.2 Screen Sharing Configuration ](#52-screen-sharing-configuration-)
+- [6. Custom Fonts ](#6-custom-fonts-)
 
 ---
 
-## 1. Flathub Installations <a name="flathub"></a>
+## 1. App Installations <a name="1-app-installations"></a>
 
 Follow these steps to install applications via Flathub:
 
@@ -30,28 +29,21 @@ Follow these steps to install applications via Flathub:
 2. Run the following commands to install the desired applications:
 
    ```bash
+   # Flatpak
    flatpak install flathub app.zen_browser.zen
    flatpak install flathub rest.insomnia.Insomnia
-   flatpak install flathub com.spotify.Client
    flatpak install flathub com.jetbrains.DataGrip
-   ```
 
----
-
-## 2. Snap Installations <a name="snap"></a>
-
-To install Visual Studio Code using Snap:
-
-1. Open your terminal.
-2. Run the following command:
-
-   ```bash
+   # Snap
    sudo snap install code --classic
+
+   # AUR
+   sudo pacman -S spotify-launcher
    ```
 
 ---
 
-## 3. Docker Setup <a name="docker"></a>
+## 2. Docker Setup <a name="2-docker-setup"></a>
 
 Set up Docker on your system by following these steps:
 
@@ -98,7 +90,7 @@ LazyDocker is a terminal UI for Docker that simplifies container management. To 
 
 ---
 
-## 4. Fast Node Manager (fnm) <a name="fast-node-manager"></a>
+## 3. Fast Node Manager (fnm) <a name="3-fast-node-manager-fnm"></a>
 
 **fnm** is a fast and simple Node.js version manager. Follow these steps to install and configure it:
 
@@ -125,9 +117,9 @@ LazyDocker is a terminal UI for Docker that simplifies container management. To 
 
 ---
 
-## 5. ZSH Configuration <a name="zsh"></a>
+## 4. ZSH Configuration <a name="4-zsh-configuration"></a>
 
-### 5.1 Spaceship Theme <a name="spaceship-theme"></a>
+### 4.1 Spaceship Theme <a name="41-spaceship-theme"></a>
 
 1. Clone the Spaceship prompt repository:
 
@@ -147,7 +139,7 @@ LazyDocker is a terminal UI for Docker that simplifies container management. To 
    ZSH_THEME="spaceship"
    ```
 
-### 5.2 ZSH Plugins <a name="zsh-plugins"></a>
+### 4.2 ZSH Plugins <a name="42-zsh-plugins"></a>
 
 Install the following ZSH plugins:
 
@@ -167,9 +159,9 @@ Install the following ZSH plugins:
 
 ---
 
-## 6. Hyprland Setup <a name="hyprland"></a>
+## 5. Hyprland Setup <a name="5-hyprland-setup"></a>
 
-### 6.1 Install Essential Packages
+### 5.1 Install Essential Packages <a name="51-install-essential-packages"></a>
 
 1. Install the required packages:
 
@@ -183,7 +175,7 @@ Install the following ZSH plugins:
    yay -S logout
    ```
 
-### 6.2 Screen Sharing Configuration <a name="screen-sharing-configuration"></a>
+### 5.2 Screen Sharing Configuration <a name="52-screen-sharing-configuration"></a>
 
 1. Install PipeWire and related packages:
 
@@ -199,7 +191,7 @@ Install the following ZSH plugins:
 
 ---
 
-## 7. Custom Fonts <a name="fonts"></a>
+## 6. Custom Fonts <a name="6-custom-fonts"></a>
 
 Download and install the following fonts:
 
