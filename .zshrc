@@ -39,3 +39,7 @@ export MOZ_ENABLE_WAYLAND=1  # For Firefox
 export EGL_PLATFORM=wayland  # For Chromium-based browsers
 
 PATH=~/.console-ninja/.bin:$PATH
+
+# ssh-agent
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_rsa
