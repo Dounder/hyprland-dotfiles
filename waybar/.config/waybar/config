@@ -23,8 +23,7 @@
     "tooltip": true,
     "on-click": "playerctl play-pause",
     "on-scroll-up": "playerctl previous",
-    "on-scroll-down": "playerctl next",
-    "max-length": 25
+    "on-scroll-down": "playerctl next"
   },
 
   //? center
@@ -34,15 +33,6 @@
   },
 
   //? right
-  "hyprland/workspaces": {
-    "disable-scroll": true,
-    "persistent_workspaces": {
-      "1": [],
-      "2": [],
-      "3": [],
-      "4": []
-    }
-  },
   "hyprland/language": {
     "format": "{}",
     "format-lat": "LATAM",
